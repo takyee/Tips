@@ -11,7 +11,7 @@ HKEY_CURRENT_USER\SOFTWARE\Policies\Google\Chrome\URLBlacklist
 ```
 export http_proxy="http://10.10.100.200:8118"
 export https_proxy="http://10.10.100.200:8118"
-no_proxy="hocn-int-wework.mysql.rds.aliyuncs.com,dysmsapi.aliyuncs.com,wework.homag.com.cn,.weixin.qq.com,127.0.0.1,localhost"
+no_proxy="hocn-int-wework.mysql.rds.aliyuncs.com,dysmsapi.aliyuncs.com,wework.homag.com.cn,127.0.0.1,localhost" //支持域名通配符写法例如 .qq.com
 ```
 取消设置
 ```
