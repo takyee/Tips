@@ -1,0 +1,6 @@
+部署在Tomcat中的服务，有时有调用国外一些服务接口的需求如Salesforce，鉴于国内的网络环境，我们可以为Tomcat的环境设置代理解决。
+一、Linux环境
+1.编辑 tomcat/bin/catalina.sh
+2.搜索 JAVA_OPTS
+3.修改为：
+JAVA_OPTS="-Dhttp.proxyHost=172.17.0.219 -Dhttp.proxyPort=8080 -Dhttps.proxyHost=172.17.0.219 -Dhttps.proxyPort=8080 -Dhttps.nonProxyHosts=hocn-int-wework.mysql.rds.aliyuncs.com|dysmsapi.aliyuncs.com  $JAVA_OPTS $JSSE_OPTS"
