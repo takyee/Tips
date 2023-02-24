@@ -7,17 +7,15 @@ ocserv可以很好的做为Cisco ASA WEBVPN的开源替代解决方案，近期�
 
 #### 开启路由转发
 
-`sudo vi /etc/sysctl.conf`
-
-`net.ipv4.ip_forward=1`
-
+```shell
+sudo vi /etc/sysctl.conf
+net.ipv4.ip_forward=1
+```
 ### 开启BBR
 
 ```shell
 echo net.core.default_qdisc=fq >> /etc/sysctl.conf
-
 echo net.ipv4.tcp_congestion_control=bbr >> /etc/sysctl.conf
-
 sysctl -p
 ```
 
