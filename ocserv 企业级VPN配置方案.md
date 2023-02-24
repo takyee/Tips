@@ -13,11 +13,13 @@ ocserv可以很好的做为Cisco ASA WEBVPN的开源替代解决方案，近期�
 
 ### 开启BBR
 
-`echo net.core.default_qdisc=fq >> /etc/sysctl.conf`
+```shell
+echo net.core.default_qdisc=fq >> /etc/sysctl.conf
 
-`echo net.ipv4.tcp_congestion_control=bbr >> /etc/sysctl.conf`
+echo net.ipv4.tcp_congestion_control=bbr >> /etc/sysctl.conf
 
-`sysctl -p`
+sysctl -p
+```
 
 ### 安装ocsrv
 
@@ -58,7 +60,9 @@ apt get install -y libpam0g-dev liblz4-dev libseccomp-dev \
 
 ocpasswd添加新用户并加入特定组
 
-`ocpasswd -c /etc/ocserv/ocserv.passwd abc -g administrator`
+```shell
+ocpasswd -c /etc/ocserv/ocserv.passwd abc -g administrator
+```
 
  ### ocserv集成 Active Directroy
 
