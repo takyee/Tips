@@ -23,6 +23,20 @@ ocserv可以很好的做为Cisco ASA WEBVPN的开源替代解决方案，近期�
 
 当前最新版本1.16 `https://ocserv.gitlab.io/www/download.html`
 
+```shell
+# Required
+apt-get install -y libgnutls28-dev libev-dev
+# Optional functionality and testing
+apt get install -y libpam0g-dev liblz4-dev libseccomp-dev \
+	libreadline-dev libnl-route-3-dev libkrb5-dev libradcli-dev \
+	libcurl4-gnutls-dev libcjose-dev libjansson-dev libprotobuf-c-dev \
+	libtalloc-dev libhttp-parser-dev protobuf-c-compiler gperf \
+	nuttcp lcov libuid-wrapper libpam-wrapper libnss-wrapper \
+	libsocket-wrapper gss-ntlmssp haproxy iputils-ping freeradius \
+	gawk gnutls-bin iproute2 yajl-tools tcpdump
+
+```
+
 可参照 README.md 编译安装
 
 ### 配置
